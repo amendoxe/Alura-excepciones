@@ -5,8 +5,9 @@ public class Flujo {
 		System.out.println("inicio de la clase main");
 		try {
 			m1();
-		} catch (ArithmeticException | NullPointerException ex) {
+		} catch (ArithmeticException | NullPointerException | MiExcepcion ex) {
 			String msg = ex.getMessage();
+
 			System.out.println("Exception " + msg);
 			ex.printStackTrace();
 		}
@@ -28,10 +29,6 @@ public class Flujo {
 
 	public static void m2() {
 		System.out.println("inicio de la clase m2");
-		for (int i = 1; i <= 5; i++) {
-			System.out.println(i);
-			Cuenta c = null;
-			c.depositar();
-		}
+		throw new MiExcepcion("Ha ocurrido una excepcion");
 	}
 }
