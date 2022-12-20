@@ -14,7 +14,7 @@ public class Flujo {
 		System.out.println("fin de la clase main");
 	}
 
-	public static void m1() {
+	public static void m1() throws MiExcepcion {
 		System.out.println("Inicio de la clase m1");
 
 		try {
@@ -27,8 +27,8 @@ public class Flujo {
 
 	}
 
-	public static void m2() {
+	public static void m2() throws MiExcepcion {
 		System.out.println("inicio de la clase m2");
-		throw new MiExcepcion("Ha ocurrido una excepcion");
+		throw new MiExcepcion("Ha ocurrido una error");
 	}
 }
